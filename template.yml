@@ -5,7 +5,7 @@ Resources:
   HelloWorldApi:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: s3://aws-sam-helloworld/index.js
+      CodeUri: s3://aws-sam-helloworld/code.zip
       Handler: handler.handler
       Runtime: nodejs8.10
       Events:
@@ -18,4 +18,4 @@ Resources:
 Outputs:
   endpoint:
     Description: The API Gateway endpoint for invoking the API
-Value: !Sub 'https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com'
+    Value: !Sub 'https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com'
