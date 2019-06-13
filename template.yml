@@ -5,7 +5,7 @@ Resources:
   HelloWorldApi:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: ./src
+      CodeUri: s3://aws-sam-helloworld/index.js
       Handler: handler.handler
       Runtime: nodejs8.10
       Events:
